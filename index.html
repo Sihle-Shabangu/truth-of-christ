@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>Truth of Christ | Coming Soon</title>
+    <meta name="description" content="Seeking Truth, Sharing Hope. Something beautiful is coming soon. Sign up to be notified when we launch our new platform exploring Christian theology and faith.">
+    <meta name="keywords" content="Christian, Truth, Christ, Bible, Faith, Theology, Coming Soon, Hope, Gospel">
+    <meta name="author" content="Truth of Christ">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://truthofchrist.org/">
+    <meta property="og:title" content="Truth of Christ | Coming Soon">
+    <meta property="og:description" content="Seeking Truth, Sharing Hope. Something beautiful is coming soon.">
+    <meta property="og:image" content="assets/bg.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://truthofchrist.org/">
+    <meta property="twitter:title" content="Truth of Christ | Coming Soon">
+    <meta property="twitter:description" content="Seeking Truth, Sharing Hope. Something beautiful is coming soon.">
+    <meta property="twitter:image" content="assets/bg.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Particles Container -->
+    <div class="particles-container" id="particles-container"></div>
+    
+    <!-- Background Overlay for elegant depth -->
+    <div class="background-overlay"></div>
+
+    <main class="page-container">
+        <div class="glass-card">
+            <!-- Brand / Logo Header -->
+            <header class="card-header">
+                <div class="logo-wrapper">
+                    <!-- Elegant Custom Gold Cross SVG Logo -->
+                    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#dfb15b" />
+                                <stop offset="50%" stop-color="#f5d68a" />
+                                <stop offset="100%" stop-color="#d4af37" />
+                            </linearGradient>
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <!-- Stylized modern cross -->
+                        <path d="M 50,15 L 50,85 M 30,35 L 70,35" stroke="url(#gold-grad)" stroke-width="6" stroke-linecap="round" filter="url(#glow)" />
+                        <!-- Outer elegant framing circles -->
+                        <circle cx="50" cy="50" r="40" stroke="url(#gold-grad)" stroke-width="1.5" fill="none" opacity="0.3" stroke-dasharray="4 4" />
+                        <circle cx="50" cy="50" r="44" stroke="url(#gold-grad)" stroke-width="0.75" fill="none" opacity="0.15" />
+                    </svg>
+                </div>
+                <h1 class="brand-title">Truth of Christ</h1>
+            </header>
+
+            <!-- Hero Body Content -->
+            <section class="card-body">
+                <span class="badge">Coming Soon</span>
+                <h2 class="hero-title">Seeking Truth,<br><span class="accent-text">Sharing Hope</span></h2>
+                <p class="hero-description">
+                    We are crafting a digital sanctuary dedicated to the exploration of Christian theology, scriptures, and deep spiritual insights. A place where faith meets reason.
+                </p>
+
+                <!-- Countdown Timer Container -->
+                <div class="countdown-container" aria-label="Countdown to launch">
+                    <div class="countdown-item">
+                        <span class="countdown-num" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-num" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-num" id="minutes">00</span>
+                        <span class="countdown-label">Mins</span>
+                    </div>
+                    <div class="countdown-divider">:</div>
+                    <div class="countdown-item">
+                        <span class="countdown-num" id="seconds">00</span>
+                        <span class="countdown-label">Secs</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter / Sign-up Form -->
+                <div class="signup-container">
+                    <p class="signup-callout">Be the first to know when we open our doors.</p>
+                    <form id="subscribe-form" class="subscribe-form" novalidate>
+                        <div class="input-group">
+                            <input 
+                                type="email" 
+                                id="email-input" 
+                                class="email-input" 
+                                placeholder="Enter your email address" 
+                                autocomplete="email"
+                                required
+                            >
+                            <label for="email-input" class="sr-only">Email Address</label>
+                            <button type="submit" id="submit-btn" class="submit-btn">
+                                <span>Notify Me</span>
+                                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Social Links & Footer -->
+            <footer class="card-footer">
+                <div class="social-links">
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube Channel">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter Page">
+                        <!-- Modern X logo svg -->
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Profile">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook Page">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="copyright">&copy; <span id="copyright-year">2026</span> Truth of Christ. All rights reserved.</p>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
