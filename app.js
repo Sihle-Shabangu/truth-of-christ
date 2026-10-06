@@ -1,10 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
-    // 1. COUNTDOWN TIMER
+    // 1. THEME SWITCHER (DARK / LIGHT MODE)
     // -------------------------------------------------------------
-    // Set target date to 90 days in the future to keep the countdown active
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 90);
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Retrieve theme from localStorage or default to dark
+    const storedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', storedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Set theme attribute
+            document.documentElement.setAttribute('data-theme', newTheme);
+            
+            // Persist theme in localStorage
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+
+    // -------------------------------------------------------------
+    // 2. COUNTDOWN TIMER
+    // -------------------------------------------------------------
+    // Fixed launch date: 5 Nov 2026 (local midnight), so the countdown doesn't reset per visit
+    const targetDate = new Date(2026, 10, 5, 0, 0, 0);
     
     // DOM Elements for countdown
     const daysEl = document.getElementById('days');
@@ -43,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownInterval = setInterval(updateCountdown, 1000);
 
     // -------------------------------------------------------------
-    // 2. NEWSLETTER FORM HANDLER
+    // 3. NEWSLETTER FORM HANDLER
     // -------------------------------------------------------------
     const form = document.getElementById('subscribe-form');
     const emailInput = document.getElementById('email-input');
@@ -105,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 3. FLOATING GOLDEN PARTICLES SYSTEM
+    // 4. FLOATING PARTICLES SYSTEM
     // -------------------------------------------------------------
     const particlesContainer = document.getElementById('particles-container');
     const particleCount = 25;
@@ -138,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 4. COPYRIGHT DYNAMIC YEAR
+    // 5. COPYRIGHT DYNAMIC YEAR
     // -------------------------------------------------------------
     const yearEl = document.getElementById('copyright-year');
     if (yearEl) {
